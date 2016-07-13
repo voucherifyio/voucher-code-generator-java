@@ -76,9 +76,17 @@ public class CodeConfig {
         return new CodeConfig(length, charset, prefix, postfix, pattern);
     }
 
-
     public String getPattern() {
         return pattern;
     }
     
+    @Override
+    public String toString() {
+        return "CodeConfig ["
+                + "length="  + length  + ", "
+                + "charset=" + charset + ", "
+                + "prefix="  + prefix  + ", "
+                + "postfix=" + postfix + ", "
+                + "pattern=" + pattern + "]";
+    }
 }
