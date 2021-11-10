@@ -1,10 +1,10 @@
 package io.voucherify.generator;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public final class VoucherCodes {
 
-    private static final Random RND = new Random(System.currentTimeMillis());
+    private static final SecureRandom RND = new SecureRandom(System.currentTimeMillis());
        
     /**
      * Generates a random code according to given config. 
