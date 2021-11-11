@@ -4,7 +4,9 @@ import java.security.SecureRandom;
 
 public final class VoucherCodes {
 
-    private static final SecureRandom RND = new SecureRandom(System.currentTimeMillis());
+    private static final SecureRandom RND = new SecureRandom();
+    //preserve previous seed behavior (though not necessary, see https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html#SecureRandom--)
+    RND.setSeed(System.currentTimeMillis());
        
     /**
      * Generates a random code according to given config. 
